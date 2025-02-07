@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Todo-List</title>
-  </head>
-  <body>
-    <header>
-      <div>
-        <div>
-          <h1>Todo-List</h1>
-          <span>Bem-Vindo, PlayerUm</span>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div>
+                <h1>Todo-List</h1>
+                <span>Bem-Vindo, PlayerUm</span>
+            </div>
+            <div class="stats">
+                <div class="stats-card" id="total-tasks">Total de Tarefas: 0</div>
+                <div class="stats-card" id="pending-tasks">Tarefas Pendentes: 0</div>
+                <div class="stats-card" id="completed-tasks">Tarefas Concluídas: 0</div>
+            </div>
         </div>
-        <div>
-          <div>Total de Tarefas: 0</div>
-          <div>Tarefas Pendentes: 0</div>
-          <div>
-            Tarefas Concluídas: 0
-          </div>
-        </div>
-      </div>
-      <button>Modo Escuro</button>
+        <button id="toggle-theme">Modo Escuro</button>
     </header>
 
-    <main>
-      <form>
-        <label for="task-title">Adicionar Tarefas</label>
-        <input
-          type="text"
-          placeholder="Título da Tarefa"
-          required
-        />
-        <button type="submit">Adicionar Tarefa</button>
-      </form>
-      <ul></ul>
+    <main class="container">
+        <form id="task-form">
+            <label for="task-title">Adicionar Tarefas</label>
+            <input type="text" id="task-title" placeholder="Título da Tarefa" required />
+            <button type="submit">Adicionar Tarefa</button>
+        </form>
+        <ul class="text-white" id="task-list"></ul>
     </main>
 
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>
+
